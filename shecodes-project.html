@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cross-stitching</title>
+    <style>
+        .principal{
+            display:block;
+            margin: 0 auto;
+            max-width: 500px;
+            background-color:beige;
+            padding: 8px;
+            border-radius: 3px;
+        }
+
+        h2{
+            text-align: center;
+            font-family: serif;
+        }
+
+        p{
+            text-align: center;
+            font-family: serif;
+            line-height: 1.5;
+        }
+
+        img{
+            max-width: 100%;
+        }
+
+        button{
+            display: block;
+            margin: 0 auto;
+            border: 1px solid plum;
+            background: white;
+            color: plum;
+            border-radius: 3px;
+            padding: 10px;
+        }
+
+        button:hover{
+            border: 1px solid rgb(183, 27, 183);
+            background: white;
+            color: rgb(219, 27, 133);
+
+        }
+
+        footer{
+            text-align: center;
+            margin: 15px;
+            color: rgb(152, 46, 218);
+            font-size: 18px;
+        }
+
+        .theme{
+            background-color: black;
+            color: white;
+            border: 1px solid black;
+            border-radius: 3px;
+            padding: 5px;
+            margin-left: 20px;
+        }
+
+        .theme:hover{
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+        }
+
+        .picture-cross-stitch{
+            border-radius: 10px;
+            transition: all 150ms case-in-out;
+            display: block;
+            margin: 10px auto;
+            padding: 5px;
+        }
+
+        .picture-cross-stitch:hover{
+            transform: scale(1.1);
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        .grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap:5px;
+
+        }
+
+        .grid img{
+            width: 200px;
+            border-radius: 10px;
+            
+        }
+
+        .dark{
+            background-color: black;
+            color: white;
+        }
+
+        .dark .principal{
+            background-color: rgb(40, 38, 38);
+        }
+
+        .dark footer{
+            color: white;
+        }
+
+    
+    </style>
+</head>
+<body>
+    <button class="theme">Change Theme</button>
+    <div class = "principal">
+        <h2>Cross-stitching</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0sB7D47_OaB6ahh4AbT_wf8WsetN8czJ62RW_a2wf6coC02Sqluw0yiwpWDbtdzoZGSs&usqp=CAU" class = "picture-cross-stitch"/>
+        <div class = "grid">
+            <img src="https://c02.purpledshub.com/uploads/sites/51/2023/09/autumn-cross-stitch-8f99666.jpeg?webp=1&w=1200"/>
+            <img src="https://c02.purpledshub.com/uploads/sites/51/2023/09/autumn-cross-stitch-leaves-d9dea16.png?webp=1&w=1200"/>
+            <img src ="https://c02.purpledshub.com/uploads/sites/51/2020/05/autumn-cross-stitch-patterns-step-5-8e336fb.jpg?webp=1&w=1200"/>
+        </div>
+        
+       
+        <p>Cross-stitch is a form of sewing and a popular form of counted-thread embroidery in which X-shaped stitches in a tiled, raster-like pattern are used to form a picture. The stitcher counts the threads on a piece of evenweave fabric (such as linen) in each direction so that the stitches are of uniform size and appearance. This form of cross-stitch is also called counted cross-stitch in order to distinguish it from other forms of cross-stitch. Sometimes cross-stitch is done on designs printed on the fabric (stamped cross-stitch); the stitcher simply stitches over the printed pattern. </p>
+        <button><a href="https://en.wikipedia.org/wiki/Cross-stitch" target="_blank">Learn more</a></button>
+    
+    </div>
+    <footer>Coded by Lívia Zeviani</footer>
+    <script>
+        function turnDark(){
+            let body = document.querySelector("body");
+
+            body.classList.toggle("dark");
+
+        }
+
+        let themeButton = document.querySelector(".theme");
+        themeButton.addEventListener('click', turnDark)
+    </script>
+</body>
+</html>
